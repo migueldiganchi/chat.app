@@ -2,13 +2,16 @@
   <ul class="nav justify-content-center" 
     v-if="showMenu">
     <li class="nav-item">
-      <a class="nav-link active" href="#">Active</a>
+      <router-link :to="{name: 'dashboard'}"
+        class="nav-link">
+        Dashboard
+      </router-link>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+      <router-link :to="{name: 'chat'}"
+        class="nav-link">
+        Chat
+      </router-link>
     </li>
     <li class="nav-item">
       <a class="nav-link"
@@ -35,7 +38,9 @@
     },
     methods: {
       doLogout () {
+        // clear authUser object
         this.$store.dispatch('clearAuthUser')
+        // remove authUser from local storage
         window.localStorage.removeItem('authUser')
         // go home
         this.$router.push({name: 'auth'})

@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Auth from '@/components/Auth'
 import Dashboard from '@/components/Dashboard'
+import Chat from '@/components/Chat'
 
 Vue.use(Router)
 
@@ -17,6 +18,14 @@ const router = new Router({
       path: '/dashboard',
       name: 'dashboard',
       component: Dashboard,
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/chat',
+      name: 'chat',
+      component: Chat,
       meta: {
         requiresAuth: true
       }
