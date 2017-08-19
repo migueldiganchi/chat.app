@@ -7,7 +7,7 @@
         <user-list></user-list>
       </div>
       <div class="col-md-9 chat-container">
-        Chant content
+        <chat-widget></chat-widget>
       </div>
     </section>         
   </div>
@@ -16,9 +16,11 @@
 <script>
   import {mapState} from 'vuex'
   import ChatUserList from '@/components/ChatUserList'
+  import ChatWidget from '@/components/ChatWidget'
   export default {
     components: {
-      'user-list': ChatUserList
+      'user-list': ChatUserList,
+      'chat-widget': ChatWidget
     },
     computed: {
       ...mapState({
