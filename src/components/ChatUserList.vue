@@ -1,7 +1,8 @@
 <template>
   <div class="wrapper chat-user-list">
-    <ul>
-      <li v-for="user in chatStore.userList">
+    <ul class="list-group">
+      <li v-for="user in chatStore.userList"
+        class="list-group-item tr-dark">
         {{ user.name }}
       </li>
     </ul>
@@ -18,3 +19,9 @@
     }
   }
 </script>
+
+<style>
+  li.list-group-item {
+    border: solid 1px red !important;
+  }
+</style>

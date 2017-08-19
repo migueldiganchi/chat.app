@@ -3,10 +3,10 @@
     <h1>Chat Page</h1>
 
     <section class="content row">
-      <div class="col-md-3 user-list-col" style="border: solid 1px red;">
+      <div class="col-md-3 user-list-col">
         <user-list></user-list>
       </div>
-      <div class="col-md-9 chat-container" style="border: solid 1px blue;">
+      <div class="col-md-9 chat-container">
         Chant content
       </div>
     </section>         
