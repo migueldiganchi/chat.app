@@ -1,13 +1,16 @@
 <template>
-  <div>
-    <h1>Chat Page</h1>
-
+  <div class="container">
     <section class="content row">
       <div class="col-md-3 user-list-col">
         <user-list></user-list>
       </div>
-      <div class="col-md-9 chat-container">
-        <chat-widget></chat-widget>
+      <div class="col-md-9 chat-container" style="border: solid 1px blue;">
+        <div class="conversation-block">
+          <conversation></conversation>
+        </div>
+        <div class="input-block">
+          <chat-input></chat-input>
+        </div>
       </div>
     </section>         
   </div>
@@ -16,11 +19,13 @@
 <script>
   import {mapState} from 'vuex'
   import ChatUserList from '@/components/ChatUserList'
-  import ChatWidget from '@/components/ChatWidget'
+  import Conversation from '@/components/Conversation'
+  import ChatInput from '@/components/ChatInput'
   export default {
     components: {
       'user-list': ChatUserList,
-      'chat-widget': ChatWidget
+      'conversation': Conversation,
+      'chat-input': ChatInput
     },
     computed: {
       ...mapState({
