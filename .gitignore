@@ -19,8 +19,10 @@
 /server_api/vendor
 /server_api/.idea
 /server_api/.vagrant
-/server_apiHomestead.json
-/server_apiHomestead.yaml
-/server_apinpm-debug.log
-/server_apiyarn-error.log
-/server_api.env
+/server_api/Homestead.json
+/server_api/Homestead.yaml
+/server_api/npm-debug.log
+/server_api/yarn-error.log
+/server_api/.env
+
+/server_io/node_modules
